@@ -7,6 +7,29 @@ This is a very simple implementation of the Floyd-Warshall all-pairs-shortest-pa
 a standard serial CPU version and a CUDA GPU version. Both implementations also calculate and store the full edge 
 path and their respective weights from the start vertex to the end vertex(if such a path exists).
 
+UPDATE:
+
+Ran some tests using this code on a K20c GPU and was able to get a 30% speedup over the 680 (using 32 bit ints)
+
+here is the results of a test on a highly connected graph with 10000 vertices;
+
+--------------------------------------------------------------------------------------------------------------------
+
+Success! The GPU Floyd-Warshall result and the CPU Floyd-Warshall results are identical
+(both final adjacency matrix and path matrix).
+
+N= 10000 , and the total number of elements(for Adjacency Matrix and Path Matrix) was 100000000 .
+Matrices are int full dense format(row major) with a minimum of 25000000 valid directed edges.
+
+The CPU timing for all was 3794.15 seconds, and the GPU timing(including all device memory operations
+(allocations,copies etc) ) for all was 198.931 seconds.
+
+The GPU result was 19.0727 faster than the CPU version.
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+
 This type of dynamic programming algorithm generally does not lend itself as well to the parallel computing model,
 but still is able to get a consistent 7 to 13 times speedup over the CPU version(including all host-device 
 and device-host  memory allocations and copies for the CUDA version). Also this implementation does seem to scale well,
