@@ -32,7 +32,7 @@ The GPU result was 19.0727 faster than the CPU version.
 The other tests done in the project folder were using the GTX 680, but in general for this task the Tesla K20c 
 is at least 30% faster.
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 This type of dynamic programming algorithm generally does not lend itself as well to the parallel computing model,
 but still is able to get a consistent 7 to 13 times speedup over the CPU version(including all host-device 
