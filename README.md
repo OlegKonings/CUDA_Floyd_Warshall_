@@ -3,39 +3,35 @@ CUDA_Floyd_Warshall_
 
 CUDA implementation of the Floyd-Warshall All pairs shortest path graph algorithm(with path reconstruction)
 
+UPDATE:  Made a new table with times for Tesla GPU. Make sure you run in release mode for full speed!
+
 This is a very simple implementation of the Floyd-Warshall all-pairs-shortest-path algorithm written in two versions,
 a standard serial CPU version and a CUDA GPU version. Both implementations also calculate and store the full edge 
 path and their respective weights from the start vertex to the end vertex(if such a path exists).
 
-UPDATE:
-
-Ran some tests using this code on a K20c GPU and was able to get a 30% speedup over the 680 (using 32 bit ints)
-
-here are the results of a test on a highly connected graph with 10000 vertices;
-
---------------------------------------------------------------------------------------------------------------------
-
-Success! The GPU Floyd-Warshall result and the CPU Floyd-Warshall results are identical
-(both final adjacency matrix and path matrix).
-
-N= 10000 , and the total number of elements(for Adjacency Matrix and Path Matrix) was 100000000 .
-Matrices are int full dense format(row major) with a minimum of 25000000 valid directed edges.
-
-The CPU timing for all was 3794.15 seconds, and the GPU timing(including all device memory operations
-(allocations,copies etc) ) for all was 198.931 seconds.
-
-The GPU result was 19.0727 faster than the CPU version.
-
-----------------------------------------------------------------------------------------------------------------------
-
-
-The other tests done in the project folder were using the GTX 680, but in general for this task the Tesla K20c 
-is at least 30% faster.
-
-
+<table>
+  <tr>
+    <th>Total Vertices</th><th>Size of Adjacency Matrix</th><th>CPU time(s)</th><th>GPU time(s)</th><th>Speedup</th>
+  </tr>
+  <tr>
+    <td> 1000</td><td> 1,000,000 </td><td> 3.9s</td><td> 0.103s </td><td> 37.86x</td>
+  </tr>
+  <tr>
+    <td> 2000</td><td> 4,000,000 </td><td> 30.90s</td><td> 0.698s </td><td> 44.34x</td>
+  </tr>
+  <tr>
+    <td> 4000</td><td> 16,000,000 </td><td> 244.22s</td><td> 5.09s </td><td> 47.98x</td>
+  </tr>
+  <tr>
+    <td> 8000</td><td> 64,000,000,000 </td><td> 1941.0s</td><td> 39.1s </td><td>49.64x</td>
+  </tr
+  <tr>
+    <td> 10000</td><td> 100,000,000,000 </td><td> 3778.1s</td><td> 77.8s </td><td> 48.56</td>
+  </tr
+</table> 
 
 This type of dynamic programming algorithm generally does not lend itself as well to the parallel computing model,
-but still is able to get a consistent 7 to 13 times speedup over the CPU version(including all host-device 
+but still is able to get a consistent 37 to 49 times speedup over the CPU version(including all host-device 
 and device-host  memory allocations and copies for the CUDA version). Also this implementation does seem to scale well,
 and so far has tested as generating the same results as the CPU version for all tested data sets.
 
@@ -47,11 +43,4 @@ and M[i][i]=0. All other entries are set to 'infinity' to indicate no known path
 Since no sparse format is used to store the matrix, it seems this algorithm is best suited for highly-connected graphs.
 If there is a low-level of connectivity the CUDA version of BFS is better suited for that type of graph.
 
-Included in the project file is a .txt file which orginates from a Wikipedia data set, and is in the form of an edge list.
-A function has been created to read in this file as well for testing on a real-world data set. 
-
-Also some initial test results are included which show the speedup using CUDA.
-
-The project was created in Visual Studio 2010 as a 64 bit application.
-
-The CPU used in an Intel I-7 3770 3.5 ghz with 3.9 ghz target, and a single Nvidia GTX 680 2GB GPU.
+The CPU used in an Intel I-7 3770 3.5 ghz with 3.9 ghz target, and a single Nvidia GTX 680 2GB GPU. 
