@@ -1,7 +1,0 @@
-Success! The GPU Floyd-Warshall result and the CPU Floyd-Warshall results are identical(both final adjacency matrix and path matrix).
-
-N= 1379 , and the total number of elements(for Adjacency Matrix and Path Matrix) was 1901641 .
-Matrices are int full dense format(row major) with a minimum of 475410 valid directed edges.
-
-The CPU timing for all was 10.249 seconds, and the GPU timing(including all device memory operations(allocations,copies etc) ) for all was 0.895 seconds.
-The GPU result was 11.4514 faster than the CPU version.
