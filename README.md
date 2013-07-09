@@ -9,7 +9,8 @@ This is a very simple implementation of the Floyd-Warshall all-pairs-shortest-pa
 a standard serial CPU version and a CUDA GPU version. Both implementations also calculate and store the full edge 
 path and their respective weights from the start vertex to the end vertex(if such a path exists).
 
-Running Times CPU vs GPU for Floyd-Warshall APSP with full Path cache:
+<b>Running Times CPU vs GPU for Floyd-Warshall APSP with full Path cache:</b>
+
 ___________________________
 
 <table>
@@ -32,6 +33,8 @@ ___________________________
     <td> 10000</td><td> 100,000,000,000 </td><td> 3778.1s</td><td> 77.8s </td><td> 48.56</td>
   </tr>
 </table> 
+____ 
+
 
 This type of dynamic programming algorithm generally does not lend itself as well to the parallel computing model,
 but still is able to get a consistent 37 to 49 times speedup over the CPU version(including all host-device 
