@@ -53,3 +53,14 @@ Since no sparse format is used to store the matrix, it seems this algorithm is b
 If there is a low-level of connectivity the CUDA version of BFS is better suited for that type of graph.
 
 The CPU used in an Intel I-7 3770 3.5 ghz with 3.9 ghz target, and a single Nvidia GTX 680 2GB GPU. 
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43459430-1', 'github.com');
+  ga('send', 'pageview');
+
+</script>
