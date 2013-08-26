@@ -40,7 +40,7 @@ ____
 
 
 This type of dynamic programming algorithm generally does not lend itself as well to the parallel computing model,
-but still is able to get a consistent 37 to 49 times speedup over the CPU version(including all host-device 
+but still is able to get a consistent 37 to 51 times speedup over the CPU version(including all host-device 
 and device-host  memory allocations and copies for the CUDA version). Also this implementation does seem to scale well,
 and so far has tested as generating the same results as the CPU version for all tested data sets.
 
