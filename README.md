@@ -64,3 +64,5 @@ The CPU used in an Intel I-7 3770 3.5 ghz with 3.9 ghz target, and a single Nvid
   ga('send', 'pageview');
 
 </script>
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/18de473bf04c6f431030e67ad1744eaa "githalytics.com")](http://githalytics.com/OlegKonings/CUDA_Floyd_Warshall_)
