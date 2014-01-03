@@ -9,6 +9,10 @@ This is a very simple implementation of the Floyd-Warshall all-pairs-shortest-pa
 a standard serial CPU version and a CUDA GPU version. Both implementations also calculate and store the full edge 
 path and their respective weights from the start vertex to the end vertex(if such a path exists).
 
+Uses two adjacency matrices, one for path values, one for path reconstruction.
+
+Я вижу, вы друг!
+
 <b>Running Times CPU vs GPU for Floyd-Warshall APSP with full Path cache:</b>
 
 ___________________________
@@ -18,25 +22,42 @@ ___________________________
     <th>Total Vertices</th><th>Size of Adjacency Matrix</th><th>CPU time(s)</th><th>GPU time(s)</th><th>Speedup</th>
   </tr>
   <tr>
-    <td> 1000</td><td> 1,000,000 </td><td> 3.9s</td><td> 0.103s </td><td> 37.86x</td>
+    <td> 1,000</td><td> 1,000,000 </td><td> 3.9s</td><td> 0.103s </td><td> 37.86x</td>
   </tr>
   <tr>
-    <td> 2000</td><td> 4,000,000 </td><td> 30.90s</td><td> 0.698s </td><td> 44.34x</td>
+    <td> 2,000</td><td> 4,000,000 </td><td> 30.90s</td><td> 0.698s </td><td> 44.34x</td>
   </tr>
   <tr>
-    <td> 4000</td><td> 16,000,000 </td><td> 244.22s</td><td> 5.09s </td><td> 47.98x</td>
+    <td> 4,000</td><td> 16,000,000 </td><td> 244.22s</td><td> 5.09s </td><td> 47.98x</td>
   </tr>
   <tr>
-    <td> 8000</td><td> 64,000,000 </td><td> 1941.0s</td><td> 39.1s </td><td>49.64x</td>
+    <td> 8,000</td><td> 64,000,000 </td><td> 1941.0s</td><td> 39.1s </td><td>49.64x</td>
   </tr
   <tr>
-    <td> 10000</td><td> 100,000,000 </td><td> 3778.1s</td><td> 77.8s </td><td> 48.56</td>
+    <td> 10,000</td><td> 100,000,000 </td><td> 3778.1s</td><td> 77.8s </td><td> 48.56</td>
   </tr>
   <tr>
-    <td> 11111</td><td> 123,454,321 </td><td> 5179.2s</td><td> 108.01s </td><td> 47.95</td>
+    <td> 11,111</td><td> 123,454,321 </td><td> 5179.2s</td><td> 108.01s </td><td> 47.95</td>
   </tr>
 </table> 
 ____ 
+
+<b>Tesla K40x initial tests</b>
+
+<table>
+<tr>
+    <th>Total Vertices</th><th>Size of Adjacency Matrix</th><th>GPU time(s)</th>
+  </tr>
+<tr>
+    <td> 15,000</td><td> 225,000,000 </td><td> 211.4s</td>
+  </tr>
+  <tr>
+    <td> 20,000</td><td> 400,000,000 </td><td> 490.2s</td>
+  </tr>
+
+</table>
+
+___
 
 
 This type of dynamic programming algorithm generally does not lend itself as well to the parallel computing model,
