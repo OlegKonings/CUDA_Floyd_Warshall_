@@ -11,7 +11,7 @@ path and their respective weights from the start vertex to the end vertex(if suc
 
 Uses two adjacency matrices, one for path values, one for path reconstruction.
 
-Я вижу, вы друг!
+привет Белгорода и Волгограда!
 
 <b>Running Times CPU vs GPU for Floyd-Warshall APSP with full Path cache:</b>
 
