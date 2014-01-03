@@ -19,7 +19,7 @@ ___________________________
 
 <table>
   <tr>
-    <th>Total Vertices</th><th>Size of Adjacency Matrix</th><th>CPU time(s)</th><th>GPU time(s)</th><th>Speedup</th>
+    <th>Total Vertices</th><th>Size of Adjacency Matrices</th><th>CPU time(s)</th><th>GPU time(s)</th><th>Speedup</th>
   </tr>
   <tr>
     <td> 1,000</td><td> 1,000,000 </td><td> 3.9s</td><td> 0.103s </td><td> 37.86x</td>
@@ -46,7 +46,7 @@ ____
 
 <table>
 <tr>
-    <th>Total Vertices</th><th>Size of Adjacency Matrix</th><th>GPU time(s)</th>
+    <th>Total Vertices</th><th>Size of Adjacency Matrices</th><th>GPU time(s)</th>
   </tr>
 <tr>
     <td> 15,000</td><td> 225,000,000 </td><td> 211.4s</td>
