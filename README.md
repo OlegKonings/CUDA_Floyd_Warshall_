@@ -13,6 +13,8 @@ Uses two adjacency matrices, one for path values, one for path reconstruction.
 
 привет Белгорода и Волгограда!
 
+調布の日本の友人が、私のコードを主演してください！
+
 <b>Running Times CPU vs GPU for Floyd-Warshall APSP with full Path cache:</b>
 
 ___________________________
