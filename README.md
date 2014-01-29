@@ -15,6 +15,8 @@ Uses two adjacency matrices, one for path values, one for path reconstruction.
 
 調布の日本の友人が、私のコードを主演してください！
 
+NOTE: no overlocking of GPU, is running at stock 700 Mhz
+
 <b>Running Times CPU vs GPU for Floyd-Warshall APSP with full Path cache:</b>
 
 ___________________________
