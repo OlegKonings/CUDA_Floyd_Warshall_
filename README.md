@@ -23,26 +23,22 @@ ___________________________
 
 <table>
   <tr>
-    <th>Total Vertices</th><th>Size of Adjacency Matrices</th><th>CPU time(s)</th><th>GPU time(s)</th><th>Speedup</th>
+    <th>Total Vertices</th><th>Size of Adjacency Matrices</th><th>GPU time(s)</th>
   </tr>
   <tr>
-    <td> 1,000</td><td> 1,000,000 </td><td> 3.9s</td><td> 0.103s </td><td> 37.86x</td>
+    <td> 1,000</td><td> 1,000,000 </td><td> 0.061s </td>
   </tr>
   <tr>
-    <td> 2,000</td><td> 4,000,000 </td><td> 30.90s</td><td> 0.698s </td><td> 44.34x</td>
+    <td> 2,000</td><td> 4,000,000 </td><td> 0.392s </td>
   </tr>
   <tr>
-    <td> 4,000</td><td> 16,000,000 </td><td> 244.22s</td><td> 5.09s </td><td> 47.98x</td>
+    <td> 4,000</td><td> 16,000,000 </td><td> 2.8s </td>
   </tr>
   <tr>
-    <td> 8,000</td><td> 64,000,000 </td><td> 1941.0s</td><td> 39.1s </td><td>49.64x</td>
+    <td> 8,000</td><td> 64,000,000 </td><td> 22.6s </td>
   </tr
   <tr>
-    <td> 10,000</td><td> 100,000,000 </td><td> 3778.1s</td><td> 77.8s </td><td> 48.56</td>
-  </tr>
-  <tr>
-    <td> 11,111</td><td> 123,454,321 </td><td> 5179.2s</td><td> 108.01s </td><td> 47.95</td>
-  </tr>
+ 
 </table> 
 ____ 
 
